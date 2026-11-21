@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+  body {
+    @apply bg-navy-900 font-sans text-ink antialiased;
+    background-image: radial-gradient(1200px 600px at 60% -10%, rgba(54, 200, 244, 0.06), transparent 60%),
+      radial-gradient(900px 500px at 100% 100%, rgba(120, 104, 245, 0.06), transparent 60%);
+  }
+  ::selection {
+    background: rgba(54, 200, 244, 0.35);
+  }
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #33496f transparent;
+  }
+  select option {
+    background: #18263b;
+  }
+}
+
+@layer utilities {
+  .focus-ring {
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan focus-visible:ring-offset-1 focus-visible:ring-offset-navy-900;
+  }
+}

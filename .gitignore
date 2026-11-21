@@ -1,0 +1,19 @@
+# Dependencies and builds
+node_modules/
+dist/
+*.tsbuildinfo
+
+# Local data of the dev infrastructure (embedded PostgreSQL, S3 emulator, generated JWT secret)
+server/.dev/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Logs and OS / editor files
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
